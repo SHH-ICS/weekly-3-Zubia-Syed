@@ -23,4 +23,7 @@ subtotal = base_price + topping_cost
 tax = subtotal * hst
 final_cost = subtotal + tax
 
+print("topping cost =", topping_cost)
+print("subtotal =", subtotal)
+print("tax =", tax)
 print("Great! Final cost =", final_cost)
