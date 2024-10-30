@@ -49,7 +49,7 @@
           if (isset($_POST['pizza size'])) {
             $myVariable = $_POST['pizza size'];
           }
-          echo "<h1></h1>\n";
+          echo "<h1>"topping cost is".$topping_;</h1>\n";
           echo "<p>My Variable is = " . $myVariable . "</p>\n";
           ?>
 
