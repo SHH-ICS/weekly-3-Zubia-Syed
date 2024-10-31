@@ -36,21 +36,22 @@
         <div class="page-content">
 
           <?php
-          $myVariable = "pizza_size";
-          $pizza_size = ("Enter pizza size (large or extra large): ");
-          $large_pizza = 6.00;
-          $extra_large = 10.00;
-          $toppings_ = [1, 1.75, 2.50, 3.35];
+          $baseprice=['large'=>6.00,'extra large'=> 10.00]; 
+          $topping_=[1, 1.75, 2.50, 3.35];
           $hst = 0.13;
           $topping_cost = $toppings_[$toppings - 1];
           $subtotal = $base_price + $topping_cost;
           $tax = $subtotal * $hst;
           $final_cost = $subtotal + $tax;
-          if (isset($_POST['pizza size'])) {
-            $myVariable = $_POST['pizza size'];
+
+          if (isset($_POST['baseprice'])) {
+            $myVariable = $_POST['baseprice'];
           }
-          echo "<h1>"topping cost is".$topping_;</h1>\n";
-          echo "<p>My Variable is = " . $myVariable . "</p>\n";
+          echo "<h1> topping cost is,.$topping_cost;</h1>\n";
+          echo "<h1>Subtotal is,.$subtotal;</h1>\n";
+          echo "<h1>Tax is,.$tax;</h1>\n";
+          echo "<h1>Final cost is,.$final_cost;</h1>\n";
+          echo "<p>My Variable is = " . $baseprice . "</p>\n";
           ?>
 
   </body>
