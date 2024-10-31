@@ -36,18 +36,22 @@
         <div class="page-content">
 
           <?php
-          $base_price = $baseprice[$pizza_size]; 
-          $topping_costs=[1, 1.75, 2.50, 3.35];
+          $baseprice = [
+            'large' => 6.00,
+            'extra_large' => 10.00]; 
+          $topping_cost=[1, 1.75, 2.50, 3.35];
           $hst = 0.13;
-          $topping_cost = $toppings_cost[$toppings - 1];
-          $subtotal = $base_price + $topping_cost;
+          $topping_costs = $toppings_cost[$toppings_cost - 1];
+          $subtotal = $baseprice + $topping_costs;
           $tax = $subtotal * $hst;
           $final_cost = $subtotal + $tax;
 
           if (isset($_POST['baseprice'])) {
             $myVariable = $_POST['baseprice'];
           }
-          echo "<h1> topping cost is,.$topping_cost;</h1>\n";
+            else;
+            $baseprice=0;
+          echo "<h1> topping cost is,.$topping_costs;</h1>\n";
           echo "<h1>Subtotal is,.$subtotal;</h1>\n";
           echo "<h1>Tax is,.$tax;</h1>\n";
           echo "<h1>Final cost is,.$final_cost;</h1>\n";
