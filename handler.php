@@ -36,13 +36,23 @@
         <div class="page-content">
 
           <?php
+          $size = "";
+          if (isset($_POST['size'])) {
+            $size =trim(strtolower($_POST['size']));
+          }
+
+          $number_toppings = -1;
+          if (isset($_POST['number_toppings'])) {
+            $number_toppings = trim(strtolower($_POST['number_toppings']));
+          }
+
           $baseprice = [
             'large' => 6.00,
-            'extra_large' => 10.00]; 
+            'extra large' => 10.00]; 
           $topping_cost=[1, 1.75, 2.50, 3.35];
           $hst = 0.13;
-          $topping_costs = $toppings_cost[$toppings_cost - 1];
-          $subtotal = $baseprice + $topping_costs;
+          $topping_costs = $toppings_cost[$number_toppings - 1];
+          $subtotal = $baseprice[$size] + $topping_costs;
           $tax = $subtotal * $hst;
           $final_cost = $subtotal + $tax;
 
