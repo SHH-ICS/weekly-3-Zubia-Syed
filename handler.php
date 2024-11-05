@@ -36,14 +36,16 @@
         <div class="page-content">
 
           <?php
+
           $size = "";
           if (isset($_POST['size'])) {
             $size =trim(strtolower($_POST['size']));
           }
 
+          echo "<h3>You picked ".$size."</h3>";
           $number_toppings = -1;
           if (isset($_POST['number_toppings'])) {
-            $number_toppings = ($_POST['number_toppings']);
+            $number_toppings = ($_POST['number_toppings']-1);
           }
 
           $baseprice = [
@@ -51,7 +53,7 @@
             'extra large' => 10.00]; 
           $toppings_cost=[1, 1.75, 2.50, 3.35];
           $hst = 0.13;
-          $toppings_costs = $toppings_cost[$number_toppings - 1];
+          $toppings_costs = $toppings_cost[$number_toppings];
           $subtotal = $baseprice[$size] + $toppings_costs;
           $tax = $subtotal * $hst;
           $final_cost = $subtotal + $tax;
