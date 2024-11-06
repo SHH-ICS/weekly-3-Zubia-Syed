@@ -58,12 +58,14 @@
           $tax = $subtotal * $hst;
           $final_cost = $subtotal + $tax;
 
-          echo "<h1>Topping cost is: " . $toppings_costs . "</h1>\n";
-          echo "<h1>Subtotal is: " . $subtotal . "</h1>\n";
-          echo "<h1>Tax is: " . $tax . "</h1>\n";
-          echo "<h1>Final cost is: " . $final_cost . "</h1>\n";
-          ?>
+          echo "<h1>Topping cost is: " .  number_format($toppings_costs, 2) . "</h1>\n";
+          echo "<h1>Subtotal is: " . number_format($subtotal,2) . "</h1>\n";
+          echo "<h1>Tax is: " . number_format($tax,2) . "</h1>\n";
+          echo "<h1>Final cost is: " . number_format($final_cost,2) . "</h1>\n";
 
+          echo '<br><br>';
+          echo '<a href="index.html"><button>Return to Homepage</button></a>';
+          ?>
   </body>
 
 </html>
