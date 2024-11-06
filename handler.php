@@ -64,7 +64,10 @@
           echo "<h1>Final cost is: " . number_format($final_cost,2) . "</h1>\n";
 
           echo '<br><br>';
-          echo '<a href="index.html"><button>Return to Homepage</button></a>';
+          echo '<a href="index.html"><button>Back</button></a>';
+          echo '<br><br>';
+          echo '<a href="index2.html"><button> Confirm Order </button></a>';
+          
           ?>
   </body>
 
